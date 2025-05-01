@@ -20,7 +20,7 @@ A sleek, modern personal portfolio webpage showcasing Prajwal L K Urs as an Andr
 
 ## Deployment
 - Hosted on [Vercel](https://vercel.com/).
-- Access the live site at: [[https://prajwallkurs.vercel.app/]]
+- Access the live site at: https://prajwallkurs.vercel.app/
 
 
 ## Notes
