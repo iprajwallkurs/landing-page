@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="description" content="Portfolio of Prajwal L K Urs - Native Mobile Developer, AI & ML Engineer, and Quant Computing enthusiast." />
+  <link rel="canonical" href="https://prajwallkurs.com" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:title" content="Prajwal L K Urs — Software Engineer" />
+  <meta property="og:description" content="Explore native mobile apps, AI/ML systems, and engineering projects by Prajwal L K Urs." />
+  <meta property="og:image" content="https://prajwallkurs.com/og-image.jpg" />
+  <meta property="og:url" content="https://prajwallkurs.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Prajwal L K Urs — Software Engineer</title>
+  <link rel="stylesheet" href="dist/output.css" />
+  <style>
+    :root {
+      --ink: #050608;
+      --white: #f7f8fb;
+      --muted: #a7abb7;
+      --dim: #6d7280;
+      --line: rgba(255,255,255,.12);
+      --glass: rgba(19,21,28,.52);
+      --ease: cubic-bezier(.2,.8,.2,1);
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    body { margin: 0; overflow-x: hidden; background: var(--ink); color: var(--white); font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .ambient { position: fixed; inset: -30%; z-index: -2; pointer-events: none; background: radial-gradient(ellipse at 20% 20%, rgba(57,64,94,.42), transparent 35%), radial-gradient(ellipse at 76% 28%, rgba(38,50,69,.33), transparent 31%), radial-gradient(ellipse at 42% 82%, rgba(22,31,49,.6), transparent 33%), #020305; animation: drift 22s ease-in-out infinite alternate; filter: saturate(.8); }
+    .ambient::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 25%, rgba(0,0,0,.62) 84%); }
+    .grain { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+    .glass { position: relative; background: linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.025) 42%, rgba(255,255,255,.055)); border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 18px 60px rgba(0,0,0,.2); backdrop-filter: blur(28px) saturate(125%); -webkit-backdrop-filter: blur(28px) saturate(125%); }
+    .glass::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(120deg, rgba(255,255,255,.12), transparent 28%, transparent 72%, rgba(255,255,255,.045)); opacity: .7; }
+    .glass-hover { transition: transform .65s var(--ease), border-color .65s var(--ease), box-shadow .65s var(--ease); }
+    .glass-hover:hover { transform: translateY(-7px); border-color: rgba(255,255,255,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 26px 72px rgba(0,0,0,.38), 0 0 36px rgba(145,165,210,.08); }
+    .nav { background: rgba(11,13,17,.56); backdrop-filter: blur(24px) saturate(150%); -webkit-backdrop-filter: blur(24px) saturate(150%); border: 1px solid rgba(255,255,255,.13); box-shadow: 0 16px 50px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.13); }
+    .eyebrow { color: #aeb5c6; font-size: 11px; font-weight: 650; letter-spacing: .18em; text-transform: uppercase; }
+    .hero-title { letter-spacing: -.075em; line-height: .91; }
+    .shine { background: linear-gradient(100deg, #fff 2%, #bfc7d8 48%, #fff 82%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .photo-wrap { background: linear-gradient(145deg, rgba(255,255,255,.2), rgba(255,255,255,.035) 42%, rgba(111,132,171,.12)); }
+    .photo-wrap::after { content: ""; position: absolute; inset: 8px; border-radius: inherit; border: 1px solid rgba(255,255,255,.18); pointer-events: none; }
+    .photo { filter: grayscale(.88) contrast(1.08) brightness(.88); transition: filter .7s var(--ease), transform .7s var(--ease); }
+    .photo-wrap:hover .photo { filter: grayscale(.25) contrast(1.05) brightness(.98); transform: scale(1.035); }
+    .orb { position: absolute; width: 19rem; height: 19rem; border-radius: 50%; background: rgba(120,145,193,.12); filter: blur(50px); pointer-events: none; }
+    .section-rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 48px; padding: 0 1.2rem; border-radius: 999px; font-size: 13px; font-weight: 650; transition: transform .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease); }
+    .btn:hover { transform: translateY(-3px); }
+    :focus-visible { outline: 2px solid rgba(255,255,255,.9); outline-offset: 4px; }
+    .btn-primary { background: #f4f5f7; color: #101217; box-shadow: 0 8px 28px rgba(255,255,255,.12); }
+    .btn-secondary { background: rgba(255,255,255,.065); border: 1px solid rgba(255,255,255,.17); color: #f4f5f7; }
+    .tag { display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,.13); background: rgba(255,255,255,.045); border-radius: 999px; padding: .4rem .7rem; color: #c5cad5; font-size: 12px; }
+    .project-number { color: #878e9e; font-variant-numeric: tabular-nums; }
+    .reveal { opacity: 0; transform: translateY(18px); animation: reveal .9s var(--ease) forwards; }
+    .about-copy { max-width: 42rem; }
+    .about-card { min-height: 8.5rem; }
+    @media (max-width: 640px) {
+      .nav { padding-left: .7rem; padding-right: .7rem; }
+      .about-copy { font-size: 1rem; line-height: 1.65; }
+      .about-card { min-height: auto; }
+    }
+    @keyframes drift { from { transform: translate3d(-2%, -1%, 0) scale(1); } to { transform: translate3d(3%, 2%, 0) scale(1.08); } }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="ambient"></div><div class="grain"></div>
+  <header class="fixed top-0 left-0 right-0 z-50 px-5 pt-5 sm:px-8">
+    <nav class="nav mx-auto flex max-w-6xl items-center justify-between rounded-full px-4 py-3 sm:px-5" aria-label="Primary navigation">
+      <a href="#top" class="flex items-center gap-2 text-sm font-semibold tracking-tight"><span class="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[10px]">PL</span><span class="hidden sm:inline">Prajwal L K Urs</span></a>
+      <div class="flex items-center gap-1 text-xs text-white/60 sm:gap-3"><a class="rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#work">Work</a><a class="rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#about">About</a><a class="rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#resume">Résumé</a><a class="rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#contact">Contact</a><a class="hidden rounded-full border border-white/15 px-3 py-2 text-white/80 transition hover:bg-white/10 hover:text-white sm:inline-flex" href="Prajwal%20L%20K%20Urs%20AI%20%26%20ML%20Engg%20Resume.pdf">AI/ML Résumé ↗</a><a class="hidden rounded-full border border-white/15 px-3 py-2 text-white/80 transition hover:bg-white/10 hover:text-white sm:inline-flex" href="Prajwal%20L%20K%20Urs%20Mobile%20Engineering%20%28iOS%20%26%20Android%29%20Resume.pdf">Mobile Résumé ↗</a></div>
+    </nav>
+  </header>
+
+  <main id="top" class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section class="relative flex min-h-[840px] items-center pb-20 pt-40 lg:min-h-[900px]">
+      <div class="orb -left-32 top-44"></div>
+      <div class="grid w-full items-center gap-16 lg:grid-cols-[1.18fr_.82fr] lg:gap-20">
+        <div class="reveal max-w-3xl" style="animation-delay:.05s">
+          <div class="mb-7 flex items-center gap-3"><span class="h-px w-9 bg-white/50"></span><span class="eyebrow">Software Engineer · Bengaluru</span></div>
+          <h1 class="hero-title text-[3.2rem] font-semibold sm:text-[4.8rem] lg:text-[6rem]">Mobile<br><span class="shine">AI / ML · Quant</span></h1>
+          <p class="mt-9 max-w-xl text-lg leading-relaxed text-white/55 sm:text-xl">I build native iOS and Android apps, AI/ML systems, and quantitative tools.</p>
+          <div class="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/[.06] px-3 py-2 text-xs text-emerald-100/80">🟢 Open to mobile and AI/ML opportunities</div>
+          <div class="mt-10 flex flex-wrap gap-3"><a class="btn btn-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=prajwallkursu%40gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
+          <div class="mt-14 flex items-center gap-5 text-xs text-white/40"><span>Bengaluru, India</span><span class="h-px w-12 bg-white/20"></span><span class="text-white/70">iOS · Android · AI/ML · Quant</span></div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-[360px] lg:ml-auto" style="animation-delay:.2s">
+          <div class="absolute -inset-8 rounded-[42px] bg-slate-400/10 blur-3xl"></div>
+          <div class="photo-wrap glass relative aspect-[.79] overflow-hidden rounded-[32px] p-2 shadow-2xl shadow-black/50">
+            <div class="relative h-full overflow-hidden rounded-[25px] bg-[#171a21]"><picture><source srcset="prajwal-avatar.avif" type="image/avif" /><source srcset="prajwal-avatar.webp" type="image/webp" /><img class="photo h-full w-full object-cover" src="IMG_5135.jpg" alt="Portrait of Prajwal L K Urs" width="400" height="506" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='flex'" /></picture><div class="absolute inset-0 hidden items-center justify-center text-7xl font-semibold tracking-[-.08em] text-white/25">PL</div><div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-white/5"></div><div class="absolute bottom-6 left-6 right-6 flex items-end justify-between"><div><p class="text-sm font-medium">Prajwal L K Urs</p><p class="mt-1 text-xs text-white/50">Software Engineer</p></div><span class="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_14px_#86efac]"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+    <section id="about" class="py-20 sm:py-28 lg:py-36"><div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-12 lg:items-start"><div><p class="eyebrow">About</p><h2 class="mt-4 text-4xl font-medium tracking-[-.055em] sm:text-6xl">What I build<br><span class="text-white/45">and why.</span></h2></div><div><p class="about-copy text-lg leading-relaxed text-white/65">I am a software engineer based in Bengaluru, India, specializing in native mobile app development for iOS and Android and AI & Machine Learning systems, with a growing focus on quantitative computing. I enjoy working where polished interfaces meet reliable backend systems.</p><div class="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2"><div class="about-card glass rounded-2xl p-4"><p class="eyebrow !text-[9px]">Experience</p><p class="mt-3 text-sm leading-relaxed text-white/75">Mobile Developer Intern at MindMatrix<br>Software Engineering Fellow at HeadstarterAI</p></div><div class="about-card glass rounded-2xl p-4"><p class="eyebrow !text-[9px]">Recognition</p><p class="mt-3 text-sm leading-relaxed text-white/75">1st Place<br>Hack a City 2.0</p></div><div class="about-card glass rounded-2xl p-4"><p class="eyebrow !text-[9px]">Community</p><p class="mt-3 text-sm leading-relaxed text-white/75">Former AWS Cloud Club Lead, GDG Core Technical Lead & Kreo Student Ambassador</p></div></div></div></div></section>
+
+    <div class="section-rule"></div>
+    <section id="work" class="py-28 sm:py-36">
+      <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="eyebrow">Selected work</p><h2 class="mt-4 text-4xl font-medium tracking-[-.055em] sm:text-6xl">Projects across<br><span class="text-white/45">mobile and AI/ML.</span></h2></div><p class="max-w-xs text-sm leading-relaxed text-white/45">Four projects covering native apps, computer vision, voice interfaces, and applied machine learning.</p></div>
+      <div class="grid gap-5 lg:grid-cols-2">
+        <article class="glass glass-hover group rounded-3xl p-6 sm:p-8"><div class="mb-10 flex items-center justify-between"><span class="project-number text-xs">01 / 04</span><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[.18em] text-white/45">MindMatrix internship</span></div><div class="mb-8 flex h-32 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#31434a] to-[#0b0e13] text-6xl font-light text-white/80 shadow-inner sm:h-40"><span class="transition duration-700 group-hover:scale-110">⌁</span></div><h3 class="text-2xl font-medium tracking-tight">Raitha Nambike — Empowering Farmers with Smart Technology</h3><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/75">Mobile Developer.</strong> Received special appreciation from company leadership during the live presentation. Built a high-performance native Android platform unifying live Mandi rates, local weather, crop diagnostics, government schemes, expert support, and farm finances.</p><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/65">Key features:</strong> AI-powered Crop Doctor, official market data, weather, Kisan Call Center access, Farm Diary, marketplace, and equipment rentals.</p><div class="mt-7 flex flex-wrap gap-2"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">MVVM</span><span class="tag">Room</span><span class="tag">CameraX</span></div></article>
+        <article class="glass glass-hover group rounded-3xl p-6 sm:p-8"><div class="mb-10 flex items-center justify-between"><span class="project-number text-xs">02 / 04</span><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[.18em] text-white/45">iOS app</span></div><div class="mb-8 flex h-32 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_40%,#5d6570_0,#15191f_48%,#090b0f_100%)] text-6xl font-extralight text-white/70 shadow-inner sm:h-40"><span class="transition duration-700 group-hover:rotate-12 group-hover:scale-110">✦</span></div><h3 class="text-2xl font-medium tracking-tight">NutriSnap — A Data-Driven Healthy Recipe Explorer</h3><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/75">Creator & Developer.</strong> Built as part of a data/ML-driven event, NutriSnap uses TheMealDB API to make healthy meal discovery fast, searchable, and effortless on iOS.</p><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/65">Key features:</strong> Browse by ingredient, category, or cuisine, view structured preparation guides, and manage saved favorites. Structured for future nutrition filters and goal-based recommendations.</p><div class="mt-7 flex flex-wrap gap-2"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">MVVM</span><span class="tag">SwiftData</span><span class="tag">TheMealDB</span></div></article>
+        <article class="glass glass-hover group rounded-3xl p-6 sm:p-8"><div class="mb-10 flex items-center justify-between"><span class="project-number text-xs">03 / 04</span><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[.18em] text-white/45">Team project</span></div><div class="mb-8 flex h-32 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#26313d] to-[#0b0e13] text-6xl font-light tracking-[-.1em] text-white/80 shadow-inner sm:h-40"><span class="transition duration-700 group-hover:scale-110">⌘</span></div><h3 class="text-2xl font-medium tracking-tight">NEXA — Multimodal AI Voice & Task Automation Platform</h3><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/75">Co-Developer & Architect.</strong> <strong class="font-medium text-white/65">Problem:</strong> Building an interactive, real-time voice agent capable of executing complex multi-step workflows.</p><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/65">Solution:</strong> Built with Next.js, TypeScript, Docker, Vapi AI, and LLM APIs. <strong class="font-medium text-white/65">Outcome:</strong> Real-time conversational task management with autonomous tool-calling, robust API routing, and serverless deployment.</p><div class="mt-7 flex flex-wrap gap-2"><span class="tag">Next.js</span><span class="tag">Vapi AI</span><span class="tag">Docker</span><span class="tag">LLM APIs</span></div></article>
+        <article class="glass glass-hover group rounded-3xl p-6 sm:p-8"><div class="mb-10 flex items-center justify-between"><span class="project-number text-xs">04 / 04</span><span class="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[.18em] text-white/45">Hack a City 2.0 · 1st place</span></div><div class="mb-8 flex h-32 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_40%,#46536a_0,#11151c_48%,#090b0f_100%)] text-6xl font-extralight text-white/70 shadow-inner sm:h-40"><span class="transition duration-700 group-hover:rotate-12 group-hover:scale-110">∿</span></div><h3 class="text-2xl font-medium tracking-tight">Deep Learning Dermatoscopic Image Classifier</h3><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/75">Lead Developer & ML Engineer.</strong> <strong class="font-medium text-white/65">Problem:</strong> Early and accurate multi-class identification of skin lesions from dermoscopic image datasets.</p><p class="mt-3 text-sm leading-relaxed text-white/45"><strong class="font-medium text-white/65">Solution:</strong> Engineered a CNN with Python, TensorFlow, and Keras on the ISIC dataset. <strong class="font-medium text-white/65">Outcome:</strong> Won 1st place at Hack a City 2.0 with high validation accuracy across multi-class lesion predictions.</p><div class="mt-7 flex flex-wrap gap-2"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">CNN</span></div></article>
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+    <section id="focus" class="py-28 sm:py-36"><div class="grid gap-12 lg:grid-cols-[.7fr_1.3fr]"><div><p class="eyebrow">Technical stack</p><h2 class="mt-4 text-4xl font-medium tracking-[-.055em] sm:text-6xl">Tools I use<br><span class="text-white/45">every day.</span></h2></div><div class="grid grid-cols-1 gap-3 sm:grid-cols-2"><div class="glass glass-hover rounded-2xl p-5"><p class="eyebrow">01 / Languages</p><p class="mt-5 text-base leading-8 text-white/75">Python · C++ · Java<br>Rust · Kotlin · Swift</p></div><div class="glass glass-hover rounded-2xl p-5"><p class="eyebrow">02 / Mobile & UI</p><p class="mt-5 text-base leading-8 text-white/75">Jetpack Compose<br>SwiftUI</p></div><div class="glass glass-hover rounded-2xl p-5"><p class="eyebrow">03 / Intelligence</p><p class="mt-5 text-base leading-8 text-white/75">TensorFlow · Keras<br>PyTorch · RAG · Qiskit</p></div><div class="glass glass-hover rounded-2xl p-5"><p class="eyebrow">04 / Infrastructure</p><p class="mt-5 text-base leading-8 text-white/75">AWS · Firebase<br>Docker · Vercel</p></div></div></div></section>
+
+    <div class="section-rule"></div>
+    <section id="resume" class="py-20 sm:py-28"><div class="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end"><div><p class="eyebrow">Résumé</p><h2 class="mt-4 text-4xl font-medium tracking-[-.055em] sm:text-6xl">Choose a résumé<br><span class="text-white/45">for the role.</span></h2></div><div class="grid gap-3 sm:grid-cols-2"><a class="glass glass-hover rounded-2xl p-5" href="Prajwal%20L%20K%20Urs%20AI%20%26%20ML%20Engg%20Resume.pdf"><p class="eyebrow !text-[9px]">01 / AI & ML</p><p class="mt-4 text-lg text-white/85">View AI/ML Résumé <span class="text-white/45">↗</span></p><p class="mt-2 text-sm leading-relaxed text-white/45">Machine learning, intelligent systems, and software engineering experience.</p></a><a class="glass glass-hover rounded-2xl p-5" href="Prajwal%20L%20K%20Urs%20Mobile%20Engineering%20%28iOS%20%26%20Android%29%20Resume.pdf"><p class="eyebrow !text-[9px]">02 / Mobile</p><p class="mt-4 text-lg text-white/85">View Mobile Résumé <span class="text-white/45">↗</span></p><p class="mt-2 text-sm leading-relaxed text-white/45">Native iOS, Android, and mobile product engineering experience.</p></a></div></div></section>
+
+    <section id="contact" class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[.035] px-6 py-20 text-center shadow-2xl shadow-black/20 sm:px-10 sm:py-28"><div class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-400/10 blur-3xl"></div><div class="relative"><p class="eyebrow">Contact</p><h2 class="mx-auto mt-5 max-w-2xl text-5xl font-medium tracking-[-.065em] sm:text-7xl">Have a project<br><span class="text-white/40">in mind?</span></h2><a class="btn btn-primary mt-9" href="https://mail.google.com/mail/?view=cm&fs=1&to=prajwallkursu%40gmail.com">Open Gmail to contact me <span aria-hidden="true">↗</span></a><p class="mt-5 text-sm text-white/40">Or write directly to <a class="text-white/75 underline decoration-white/25 underline-offset-4 transition hover:text-white" href="mailto:prajwallkursu@gmail.com">prajwallkursu@gmail.com</a></p></div></section>
+  </main>
+  <footer class="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-12 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between sm:px-8"><div><span>© <span id="year">2026</span> Prajwal L K Urs</span><a class="ml-4 transition hover:text-white" href="mailto:prajwallkursu@gmail.com">prajwallkursu@gmail.com</a></div><div class="flex gap-5"><a class="transition hover:text-white" href="https://www.linkedin.com/in/prajwallkurs/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="transition hover:text-white" href="https://x.com/prajwallkurs" target="_blank" rel="noreferrer">X ↗</a><a class="transition hover:text-white" href="https://www.instagram.com/prajwallkurs/" target="_blank" rel="noreferrer">Instagram ↗</a></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const cards = document.querySelectorAll('.glass-hover');
+    cards.forEach(card => card.addEventListener('pointermove', event => { const rect = card.getBoundingClientRect(); card.style.setProperty('--x', `${event.clientX - rect.left}px`); card.style.setProperty('--y', `${event.clientY - rect.top}px`); }));
+  </script>
+</body>
+</html>
