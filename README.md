@@ -1,36 +1,97 @@
-# Prajwal L K Urs - Personal Portfolio
+# Prajwal L K Urs — Personal Portfolio
 
-A sleek, modern personal portfolio webpage showcasing Prajwal L K Urs as an Android and iOS developer with an interest in DevOps. The site features a dynamic matrix-style background, a typed text animation, and links to social media and a downloadable CV.
+Personal portfolio for Prajwal L K Urs, a software engineer focused on native mobile development, AI/ML systems, and quantitative computing.
 
-## Features
-- **Matrix Background**: Animated matrix effect using HTML5 Canvas.
-- **Typed Animation**: Dynamic text animation for job titles using Typed.js.
-- **Responsive Design**: Optimized for various screen sizes.
-- **Social Media Links**: Links to LinkedIn, Twitter, GitHub, Hashnode, and Instagram.
-- **Downloadable CV**: Option to download a CV.
-- **Contact Link**: Email link for outreach.
+## Overview
+
+The site is a responsive, single-page portfolio with:
+
+- Liquid Glass-inspired dark interface with frosted panels and ambient background motion
+- Native iOS and Android, AI/ML, and quantitative computing focus
+- Integrated profile portrait with AVIF, WebP, and JPG fallbacks
+- Four featured projects:
+  - **Raitha Nambike** — Android agriculture platform built during the MindMatrix internship
+  - **NutriSnap** — Native iOS recipe discovery application
+  - **NEXA** — Multimodal AI voice and task automation platform
+  - **Deep Learning Dermatoscopic Image Classifier** — Hack a City 2.0 first-place project
+- About, experience, recognition, community, technical stack, résumé, and contact sections
+- Separate AI/ML and Mobile Engineering résumé links
+- Responsive layout and visible keyboard focus states
+- Reduced-motion support for users who prefer less animation
 
 ## Tech Stack
-- **HTML5**: Page structure.
-- **CSS3**: Styling with flexbox and hover effects.
-- **JavaScript**: Matrix animation and Typed.js integration.
-- **External Libraries**:
-  - [Font Awesome](https://fontawesome.com/) for social media icons.
-  - [Typed.js](https://github.com/mattboldt/typed.js/) for typing animation.
+
+- HTML5
+- Tailwind CSS compiled locally with PostCSS and Autoprefixer
+- Custom CSS for glass surfaces, gradients, responsive behavior, and motion
+- Vanilla JavaScript for small page interactions and the dynamic copyright year
+- Sharp for optimized image and social preview asset generation
+
+## Project Structure
+
+```text
+.
+├── index.html
+├── dist/output.css
+├── src/input.css
+├── tailwind.config.js
+├── postcss.config.js
+├── favicon.png
+├── favicon.svg
+├── og-image.jpg
+├── og-image.svg
+├── prajwal-avatar.avif
+├── prajwal-avatar.webp
+├── IMG_5135.jpg
+├── Prajwal L K Urs AI & ML Engg Resume.pdf
+└── Prajwal L K Urs Mobile Engineering (iOS & Android) Resume.pdf
+```
+
+## Run Locally
+
+Install dependencies and compile the stylesheet:
+
+```bash
+npm install
+npm run build
+```
+
+Serve the static site:
+
+```bash
+python3 -m http.server 4173
+```
+
+Open [http://127.0.0.1:4173](http://127.0.0.1:4173) in a browser.
+
+## Build
+
+The production stylesheet is generated with:
+
+```bash
+npm run build
+```
+
+This writes the minified Tailwind output to `dist/output.css`. The site does not use the Tailwind CDN.
 
 ## Deployment
-- Hosted on [Vercel](https://vercel.com/).
-- Access the live site at: https://prajwallkurs.vercel.app/
 
+The project can be deployed as a static site on Vercel.
 
-## Notes
-- Ensure `images/` contains `main_photo.jpg` and `PLK C V (1).jpg`, or update file paths in `index.html`.
-- Matrix animation may be CPU-intensive on low-end devices.
-- CDN links for Font Awesome and Typed.js require an internet connection.
+- Framework preset: **Other**
+- Build command: `npm run build`
+- Production branch: `main`
+- Output directory: project root
 
-## License
-This project is for personal use and demonstration purposes. Feel free to adapt it for your own portfolio.
+If the Vercel project is connected to this GitHub repository, pushing to `main` triggers a new deployment automatically.
 
 ## Contact
+
 - Email: [prajwallkursu@gmail.com](mailto:prajwallkursu@gmail.com)
 - LinkedIn: [prajwallkurs](https://www.linkedin.com/in/prajwallkurs/)
+- X: [@prajwallkurs](https://x.com/prajwallkurs)
+- Instagram: [@prajwallkurs](https://www.instagram.com/prajwallkurs/)
+
+## License
+
+This project is for personal use and demonstration purposes.
