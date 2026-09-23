@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=24"
+  },
   "devDependencies": {
     "autoprefixer": "^10.6.1",
     "postcss": "^8.5.28",
